@@ -45,7 +45,8 @@ namespace Cogworks.AzureSearch.IoC.Autofac.Builders
             return this;
         }
 
-        public IContainerBuilder RegisterClientOptions(string serviceName, string credentials, string serviceEndpointUrl)
+        public IContainerBuilder RegisterClientOptions(string serviceName, string credentials,
+            string serviceEndpointUrl, bool searchHeaders = false)
         {
             _ = _builder.Register(_ => new ClientOption(
                     serviceName,
